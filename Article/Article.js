@@ -88,6 +88,29 @@ const data = [
   }
 ];
 
+const myArticle = {
+  title: 'A Different Kind of Ipsum',
+  date: 'Dec 4th, 2019',
+  firstParagraph: `While settling this point, she was suddenly roused by the sound of the door-bell, and her spirits were a little fluttered by the idea of its being Colonel Fitzwilliam himself, who had once before called late in the evening, and might now come to inquire particularly after her. But this idea was soon banished, and her spirits were very differently affected, when, to her utter amazement, she saw Mr. Darcy walk into the room. In an hurried manner he immediately began an inquiry after her health, imputing his visit to a wish of hearing that she were better. She answered him with cold civility. He sat down for a few moments, and then getting up, walked about the room. Elizabeth was surprised, but said not a word. After a silence of several minutes, he came towards her in an agitated manner, and thus began:`,
+
+  secondParagraph: `"In vain I have struggled. It will not do. My feelings will not be repressed. You must allow me to tell you how ardently I admire and love you."`,
+
+  thirdParagraph: `Elizabeth's astonishment was beyond expression. She stared, coloured, doubted, and was silent. This he considered sufficient encouragement; and the avowal of all that he felt, and had long felt for her, immediately followed. He spoke well; but there were feelings besides those of the heart to be detailed; and he was not more eloquent on the subject of tenderness than of pride. His sense of her inferiority--of its being a degradation--of the family obstacles which had always opposed to inclination, were dwelt on with a warmth which seemed due to the consequence he was wounding, but was very unlikely to recommend his suit.`
+}
+
+const yourArticle = {
+  title: 'Diary of Dracula',
+  date: 'October 31st, 2018',
+  firstParagraph: `18 May.--I have been down to look at that room again in daylight, for I must know the truth. When I got to the doorway at the top of the stairs I found it closed. It had been so forcibly driven against the jamb that part of the woodwork was splintered. I could see that the bolt of the lock had not been shot, but the door is fastened from the inside. I fear it was no dream, and must act on this surmise.`,
+
+  secondParagraph: `19 May.--I am surely in the toils. Last night the Count asked me in the suavest tones to write three letters, one saying that my work here was nearly done, and that I should start for home within a few days, another that I was starting on the next morning from the time of the letter, and the third that I had left the castle and arrived at Bistritz. I would fain have rebelled, but felt that in the present state of things it would be madness to quarrel openly with the Count whilst I am so absolutely in his power; and to refuse would be to excite his suspicion and to arouse his anger. He knows that I know too much, and that I must not live, lest I be dangerous to him; my only chance is to prolong my opportunities. Something may occur which will give me a chance to escape. I saw in his eyes something of that gathering wrath which was manifest when he hurled that fair woman from him. He explained to me that posts were few and uncertain, and that my writing now would ensure ease of mind to my friends; and he assured me with so much impressiveness that he would countermand the later letters, which would be held over at Bistritz until due time in case chance would admit of my prolonging my stay, that to oppose him would have been to create new suspicion. I therefore pretended to fall in with his views.`,
+
+  thirdParagraph: `28 May.--There is a chance of escape, or at any rate of being able to send word home. A band of Szgany have come to the castle, and are encamped in the courtyard. These Szgany are gipsies; I have notes of them in my book. They are peculiar to this part of the world, though allied to the ordinary gipsies all the world over. There are thousands of them in Hungary and Transylvania, who are almost outside all law. They attach themselves as a rule to some great noble or boyar, and call themselves by his name.`
+}
+
+data.push(myArticle);
+data.unshift(yourArticle);
+
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
   
   <div class="article">
@@ -153,5 +176,4 @@ newArticleArr.forEach(articleComponent => {
 });
 
   /* Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
-
 */
