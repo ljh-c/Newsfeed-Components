@@ -137,26 +137,21 @@ function articleMaker(articleData) {
   expand.addEventListener('click', () => {
     article.classList.toggle('article-open');
   });
+  article.appendChild(expand);
 
   return article;
 }
 
-  /* Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
+  /* Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div. */
 
-  Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
+const newArticleArr = data.map(articleObj => {
+  return articleMaker(articleObj);
+}) 
+
+newArticleArr.forEach(articleComponent => {
+  document.querySelector('.articles').appendChild(articleComponent);
+});
+
+  /* Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
-
-// function buttonCreator(buttonText){
-//   const button = document.createElement('button');
-
-//   button.textContent = buttonText;
-
-//   button.classList.add('button');
-
-//   button.addEventListener('click', (e) => {
-//       console.log('clicked!');
-//   });
-
-//   return button;
-// }
