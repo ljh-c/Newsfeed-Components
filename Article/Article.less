@@ -11,6 +11,7 @@
   height: 50px;
   overflow: hidden;
   box-shadow: 2px 2px 2px lightgrey;
+  transition: height 1s ease-out;
 
   h2 {
     font-size: 28px;
@@ -43,8 +44,77 @@
 
 .article-open {
   height: 400px;
+  overflow: scroll;
+
+  .expandButton {
+    bottom: -60px;
+  }
 }
 
+.add-article {
+  margin: 40px 20%;
+  padding: 0 20px 25px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  background-color: #F5F7DC;
+  box-shadow: 2px 2px 2px lightgrey;
 
+  h2 {
+    font-size: 28px;
+    padding: 0;
+    margin: 15px 0;
+  }
 
+  .date {
+    margin: 0;
+    font-size: 14px;
+  }
 
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  // .expandButton {
+  //   // position: absolute;
+  //   // bottom: 0;
+  //   // left: 50%;
+  //   // display: block;
+  //   font-size: 12px;
+  //   color: grey;
+  //   cursor: pointer;
+  //   // transform: translate(-50%);
+  //   background-color: red;
+  // }
+
+  textarea {
+    width: 60%;
+    padding: 1.2rem 2.0rem;
+    margin: 0.8rem 0;
+    border: 0.2rem solid #8D8D92;
+    border-radius: 1.0rem;
+    font-size: 16px;
+  }
+
+  input[type=submit] {  
+    text-align: center;
+    font-size: 1.6rem;
+
+    display: block;
+    background: #388E3C;
+    cursor: pointer;
+    width: 18.0rem;
+    height: 4.0rem;
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    &:hover {
+      background-color: #F03A47;
+    }
+  }
+  
+}
