@@ -124,7 +124,7 @@ data.unshift(yourArticle);
 
   Hint: You will need to use createElement more than once here!
 
-  Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above. 
+  Your function should take either an object as its one argument, or 5 separate arguments mapping to each piece of the data object above. 
 
   /* Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
 
@@ -157,10 +157,26 @@ function articleMaker(articleData) {
 
   const expand = document.createElement('span');
   expand.classList.add('expandButton');
+  expand.textContent = 'expand';
   expand.addEventListener('click', () => {
     article.classList.toggle('article-open');
+
+    if (article.classList.contains('article-open')) {
+      expand.textContent = 'collapse';
+    } else {
+      expand.textContent = 'expand';
+    }
   });
   article.appendChild(expand);
+
+  const close = document.createElement('div');
+  close.classList.add('close');
+  close.textContent = 'remove';
+  close.addEventListener('click', event => {
+    const articles = document.querySelector('.articles');
+    articles.removeChild(event.target.parentNode)
+  });
+  article.appendChild(close);
 
   return article;
 }
@@ -177,3 +193,32 @@ newArticleArr.forEach(articleComponent => {
 
   /* Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 */
+
+function Article(title, date, para1, para2, para3) {
+  this['title'] = title;
+  this['date'] = date;
+  this['firstParagraph'] = para1;
+  this['secondParagraph'] = para2;
+  this['thirdParagraph'] = para3;
+}
+
+function addArticle(userArticle) {
+  const articleComponent = articleMaker(userArticle);
+  console.log(articleComponent);
+  document.querySelector('.articles').appendChild(articleComponent);
+}
+
+const submitBtn = document.querySelector('.form-button');
+submitBtn.addEventListener('click', (event) => {
+  const inputTitle = document.getElementById('title').value; 
+  const inputDate = document.getElementById('date').value; 
+  const inputPara1 = document.getElementById('p1').value; 
+  const inputPara2 = document.getElementById('p2').value; 
+  const inputPara3 = 'the children are wrong';
+
+  const inputArticle = new Article(inputTitle, inputDate, inputPara1, inputPara2, inputPara3);
+
+  addArticle(inputArticle);
+
+  event.preventDefault();
+});

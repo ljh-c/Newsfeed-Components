@@ -48,6 +48,7 @@
   height: 50px;
   overflow: hidden;
   box-shadow: 2px 2px 2px lightgrey;
+  transition: height 1s ease-out;
 }
 .article h2 {
   font-size: 28px;
@@ -75,6 +76,92 @@
 }
 .article-open {
   height: 400px;
+}
+.add-article {
+  margin: 40px 20%;
+  padding: 0 20px 25px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  background-color: #F5F7DC;
+  box-shadow: 2px 2px 2px lightgrey;
+}
+.add-article h2 {
+  font-size: 28px;
+  padding: 0;
+  margin: 15px 0;
+}
+.add-article .date {
+  margin: 0;
+  font-size: 14px;
+}
+.add-article .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.add-article .expandButton {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  font-size: 12px;
+  color: grey;
+  cursor: pointer;
+  transform: translate(-50%);
+  background-color: white;
+}
+.add-article textarea {
+  width: 60%;
+  padding: 1.2rem 2rem;
+  margin: 0.8rem 0;
+  border: 0.2rem solid #8D8D92;
+  border-radius: 1rem;
+  font-size: 16px;
+}
+.add-article input[type=submit] {
+  text-align: center;
+  font-size: 1.6rem;
+  display: block;
+  background: #388E3C;
+  cursor: pointer;
+  width: 18rem;
+  height: 4rem;
+  border-radius: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.add-article input[type=submit]:hover {
+  background-color: #F03A47;
+}
+.menu-button {
+  position: absolute;
+  left: 20px;
+  cursor: pointer;
+}
+.menu {
+  position: fixed;
+  top: 75px;
+  left: -350px;
+  width: 350px;
+  height: 100vh;
+  /* This give the height 100% of the screen or, '100% of View Height' */
+  background-color: #81C784;
+  border: 1px solid #004D40;
+  border-left: none;
+  border-bottom: none;
+  z-index: 2;
+  /* This set the layer level of the element, it has precendence over initial level of 1*/
+  transition: left 1s ease-out;
+}
+.menu ul li {
+  list-style-type: none;
+  font-size: 32px;
+  padding: 30px 0;
+  text-align: center;
+}
+.menu--open {
+  left: 0;
 }
 html,
 body {
