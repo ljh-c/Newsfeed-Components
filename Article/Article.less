@@ -44,6 +44,11 @@
 
 .article-open {
   height: 400px;
+  overflow: scroll;
+
+  .expandButton {
+    bottom: -60px;
+  }
 }
 
 .add-article {
@@ -71,16 +76,17 @@
     right: 10px;
   }
 
-  .expandButton {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    font-size: 12px;
-    color: grey;
-    cursor: pointer;
-    transform: translate(-50%);
-    background-color: white;
-  }
+  // .expandButton {
+  //   // position: absolute;
+  //   // bottom: 0;
+  //   // left: 50%;
+  //   // display: block;
+  //   font-size: 12px;
+  //   color: grey;
+  //   cursor: pointer;
+  //   // transform: translate(-50%);
+  //   background-color: red;
+  // }
 
   textarea {
     width: 60%;
