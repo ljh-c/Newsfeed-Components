@@ -214,7 +214,7 @@ submitBtn.addEventListener('click', (event) => {
   const inputDate = document.getElementById('date').value; 
   const inputPara1 = document.getElementById('p1').value; 
   const inputPara2 = document.getElementById('p2').value; 
-  const inputPara3 = 'the children are wrong';
+  const inputPara3 = document.getElementById('p3').value; 
 
   const inputArticle = new Article(inputTitle, inputDate, inputPara1, inputPara2, inputPara3);
 
